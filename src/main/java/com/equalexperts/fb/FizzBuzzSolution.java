@@ -6,6 +6,7 @@ public class FizzBuzzSolution {
 	public static final String FIZZ ="fizz";
 	public static final String BUZZ ="buzz";
 	public static final String EMPTY_SPACE =" ";
+	private static final String LUCKY = "lucky";
 	
 	
 	
@@ -18,7 +19,12 @@ public class FizzBuzzSolution {
 		StringBuilder sb = new StringBuilder();	
 		FizzBuzz implementation = new FizzBuzzImplementation();
 		for(Integer i=from;i<=to;i++){
-			if(implementation.isFizz(i)&&implementation.isBuzz(i))
+			
+			if(implementation.isLucky(i)){
+				sb.append(LUCKY+EMPTY_SPACE);
+				continue;
+			}
+			else if(implementation.isFizz(i)&&implementation.isBuzz(i))
 			{
 				sb.append(FIZZBUZZ+EMPTY_SPACE);
 				continue;

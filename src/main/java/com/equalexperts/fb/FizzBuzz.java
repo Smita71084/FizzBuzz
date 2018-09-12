@@ -11,5 +11,7 @@ public interface FizzBuzz {
 	
 	public boolean isBuzz(Integer number);	
 	
+	public boolean isLucky(Integer number);
+	
 	
 }

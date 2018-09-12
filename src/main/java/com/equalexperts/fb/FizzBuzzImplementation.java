@@ -29,6 +29,18 @@ public class FizzBuzzImplementation implements FizzBuzz {
 		{
 			return false;
 		}
+	}
+
+	@Override
+	public boolean isLucky(Integer number)
+	{
+		if(number.toString().contains("3"))
+		{
+			return true;
+		}else
+		{
+			return false;
+		}
 	}	
 	    
 }

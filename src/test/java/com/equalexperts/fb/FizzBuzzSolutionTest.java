@@ -17,8 +17,8 @@ public class FizzBuzzSolutionTest {
 	@Test
 	public void testFizzBuzzForRange() throws FizzBuzzException {
 		
-		assertTrue(solution.getFizzBuzzForRange(1,3).equals("1 2 fizz"));
-		assertTrue(solution.getFizzBuzzForRange(1,20).equals("1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz"));
+		assertTrue(solution.getFizzBuzzForRange(1,3).equals("1 2 lucky"));
+		assertTrue(solution.getFizzBuzzForRange(1,20).equals("1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz"));
 		
 	}
 	

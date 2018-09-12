@@ -31,5 +31,17 @@ public class FizzBuzzImplementationTest {
 		assertFalse(implementation.isBuzz(18));
 		
 	}
+	
+	
+	@Test
+	public void testIsLucky() {
+		FizzBuzzImplementation implementation = new FizzBuzzImplementation();
+		assertTrue(implementation.isLucky(33));
+		assertFalse(implementation.isLucky(15));
+		assertTrue(implementation.isLucky(834));
+		assertFalse(implementation.isLucky(18));
+		
+	}
+
 
 }
