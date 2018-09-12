@@ -2,8 +2,12 @@ package com.equalexperts.fb;
 
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.junit.Before;
 import org.junit.Test;
+
 
 public class FizzBuzzSolutionTest {
 	
@@ -23,10 +27,22 @@ public class FizzBuzzSolutionTest {
 	}
 	
 	@Test(expected=FizzBuzzException.class)
-	public void testFizzBuzzException() throws FizzBuzzException{		
-			solution = new FizzBuzzSolution();
+	public void testFizzBuzzException() throws FizzBuzzException{			
 			solution.getFizzBuzzForRange(5,0);
 		}
+	@Test
+	public void testFrequencies() throws FizzBuzzException{
+		Map<String,Integer> frequenciesMap = new HashMap<String,Integer>();
+		frequenciesMap=solution.getFrequencies(solution.getFizzBuzzForRange(1,20));
+		assertTrue(frequenciesMap.get("fizzbuzz")==1);
+		assertTrue(frequenciesMap.get("integer")==10);
+		assertTrue(frequenciesMap.get("fizz")==4);
+		assertTrue(frequenciesMap.get("buzz")==3);
+		assertTrue(frequenciesMap.get("lucky")==2);
+		assertFalse(frequenciesMap.get("buzz")==9);
+		assertFalse(frequenciesMap.get("fizz")==10);
+		assertFalse(frequenciesMap.get("fizzbuzz")==2);
+	}
 		
 	
 
